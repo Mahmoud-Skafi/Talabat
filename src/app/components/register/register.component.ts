@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
 
   constructor() { }
-
+  userData = {
+    "email":"",
+    "password":""
+  };
   ngOnInit(): void {
+  }
+  registerUser(){
+    console.log(this.userData)
   }
 
 }
