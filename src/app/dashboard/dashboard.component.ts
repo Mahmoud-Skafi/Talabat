@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../guard/auth.service';
 import { RestaurantService } from '../services/restaurant.service';
 
 @Component({
@@ -8,10 +9,21 @@ import { RestaurantService } from '../services/restaurant.service';
 })
 export class DashboardComponent implements OnInit {
   showFiller = false;
-  constructor(private restaurant:RestaurantService) { }
+  restaurantData=[];
 
+  constructor(private restaurantService:RestaurantService,public authService:AuthService) { }
   ngOnInit() {
-    // this.restaurant.getrestaurant().subscribe()
+    this.restaurantService.getrestaurant().subscribe(
+      {
+        next:res=>{
+          console.log(res);
+          this.restaurantData=res;
+        },
+        error:err=>{
+          console.log(err);
+        }
+      }
+    )
   }
 
 }
