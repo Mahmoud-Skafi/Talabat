@@ -25,13 +25,15 @@ export class LoginComponent  {
       "password": ""
     }
 
-
+    token;
     signIn(userData){
       console.log(userData);
       this.authService.login(userData).subscribe(
         {
-          next:data=>{
-            console.log(data);
+          next:res=>{
+            console.log(res);
+            this.token = res['token'];
+            localStorage.setItem('token',this.token)
             this.router.navigate(['/dashboard']);
           },
           error:err=>{

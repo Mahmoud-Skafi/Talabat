@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from '../services/restaurant.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
   showFiller = false;
-  constructor() { }
+  constructor(private restaurant:RestaurantService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.restaurant.getrestaurant().subscribe()
   }
 
 }
