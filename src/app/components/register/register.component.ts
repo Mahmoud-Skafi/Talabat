@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import {AuthService} from '../../guard/auth.service';
 @Component({
   selector: 'app-register',
@@ -7,11 +8,15 @@ import {AuthService} from '../../guard/auth.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private _auth:AuthService) { }
+  constructor(private authService:AuthService,private router:Router) { }
+  invalidRegister:boolean;
   userData = {
-    "email":"",
-    "password":""
+    "user_name": "",
+    "email": "",
+    "password": "",
+    "role":"admin"
   };
+
   ngOnInit(): void {
   }
   // registerUser(){
@@ -22,5 +27,16 @@ export class RegisterComponent implements OnInit {
   //     err=> console.log(err)
   //   )
   // }
+  register(userData){
+    this.authService.registerUser(userData).subscribe({
+        next:res=>{
+          // console.log(res);
+          this.router.navigate(['/login']);
+        },
+        error:err=>{
+          this.invalidRegister=true;
+        }
 
+    })
+  }
 }
