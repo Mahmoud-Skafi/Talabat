@@ -26,7 +26,9 @@ import { AuthService } from './auth.service';
 @Injectable()
 export class TokenService implements HttpInterceptor {
   constructor(private injector:Injector) { }
+
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
     let token=localStorage.getItem('token');
     console.log(token);
     let tokenizedReq=req.clone({

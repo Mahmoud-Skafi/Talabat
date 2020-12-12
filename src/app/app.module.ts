@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -15,10 +16,14 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 import { AuthService } from './guard/auth.service';
 import { AuthGuard } from './guard/auth.guard';
 import { TokenService } from './guard/token.service';
 import { RestaurantService } from './services/restaurant.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +31,9 @@ import { RestaurantService } from './services/restaurant.service';
     RegisterComponent,
     HomeComponent,
     NotFoundComponent,
-    DashboardComponent
+    DashboardComponent,
+    NavbarComponent,
+    RestaurantsManagerComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,11 @@ import { RestaurantService } from './services/restaurant.service';
     MatToolbarModule,
     MatListModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule,
+    CommonModule,
+    MatTableModule
+
   ],
   providers: [
     AuthService,

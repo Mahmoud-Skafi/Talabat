@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
 const routes: Routes = [
   {
     path:'login',
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path:'dashboard',
     component:DashboardComponent,canActivate:[AuthGuard]
+  },
+  {
+    path:'restaurants',
+    component:RestaurantsManagerComponent,canActivate:[AuthGuard]
   },
   {
     path:'**',
