@@ -24,6 +24,7 @@ import { RestaurantService } from './services/restaurant.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import {MatTableModule} from '@angular/material/table';
     MatIconModule,
     MatInputModule,
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
 
   ],
   providers: [
