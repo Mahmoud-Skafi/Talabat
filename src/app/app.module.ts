@@ -23,8 +23,13 @@ import { TokenService } from './guard/token.service';
 import { RestaurantService } from './services/restaurant.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
+// import {ViewRestaurants } from './restaurants-manager/restaurants-manager.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatDialogModule} from '@angular/material/dialog';
+// import { ViewComponent } from './restaurants-manager/view/view.component';
+import { ViewRestaurntsComponent } from './restaurants-manager/view-restaurnts/view-restaurnts.component';
+import {NgxPrintModule} from 'ngx-print';
+import { EditRestaurntsComponent } from './restaurants-manager/edit-restaurnts/edit-restaurnts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,11 @@ import {MatDialogModule} from '@angular/material/dialog';
     NotFoundComponent,
     DashboardComponent,
     NavbarComponent,
-    RestaurantsManagerComponent
+    RestaurantsManagerComponent,
+    // ViewRestaurants,
+    // ViewComponent,
+    ViewRestaurntsComponent,
+    EditRestaurntsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +59,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     CommonModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxPrintModule
 
   ],
   providers: [

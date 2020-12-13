@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Details </h2>
+<!-- <h1 mat-dialog-title> {{data.dataKey.name}} </h1> -->
+<mat-dialog-content id="print-section" class="mat-typography">
+  <h2>Restaurants Name </h2>
+  <div class=" res__data d-flex-row">
+    <mat-icon>fastfood</mat-icon>
+    <h3> {{data.dataKey.name}} </h3>
+  </div>
+  <br>
+  <h2>Restaurants Description </h2>
+  <h3> {{data.dataKey.desc}} </h3>
+  <br>
+  <h2>Restaurants Location </h2>
+  <div class="res__data d-flex-row">
+    <mat-icon>location_on</mat-icon>
+    <h3> {{data.dataKey.city}} {{data.dataKey.street}} </h3>
+  </div>
+
+  <h2>Restaurants Contact </h2>
+  <div class=" res__data d-flex-row">
+    <mat-icon>perm_phone_msg</mat-icon>
+    <h3> {{data.dataKey.phone}}</h3>
+  </div>
+  <h2>Restaurants Rating </h2>
+  <div class="res__data d-flex-row">
+    <mat-icon>thumbs_up_down
+    </mat-icon>
+    <h3> {{data.dataKey.rating}}</h3>
+  </div>
+  <div class="res__image">
+    <img src="assets/img/Lab-Exam.png" alt="" width="100%">
+  </div>
+  <br>
+  <br>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button printSectionId="print-section" ngxPrint mat-button color="primary">Install</button>
+</mat-dialog-actions>

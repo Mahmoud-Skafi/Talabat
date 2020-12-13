@@ -7,6 +7,8 @@ import { Inject } from '@angular/core';
 import {
   MAT_DIALOG_DATA
 } from '@angular/material/dialog';
+import { ViewRestaurntsComponent } from './view-restaurnts/view-restaurnts.component';
+import { EditRestaurntsComponent } from './edit-restaurnts/edit-restaurnts.component';
 @Component({
   selector: 'app-restaurants-manager',
   templateUrl: './restaurants-manager.component.html',
@@ -21,7 +23,7 @@ export class RestaurantsManagerComponent implements OnInit {
     this.restaurantService.getrestaurant().subscribe(
       {
         next:res=>{
-          // console.log(res);
+
           this.restaurantData=res;
         },
         error:err=>{
@@ -30,31 +32,21 @@ export class RestaurantsManagerComponent implements OnInit {
       }
     )
   }
-  openDialog(element) {
-    // console.log(element);
-    const dialogRef = this.dialog.open(ViewRestaurants,{
-      width:'500px',
-      height:'500px',
+  viewResaurnt(element) {
+    const dialogRef = this.dialog.open(ViewRestaurntsComponent,{
       data:{
         dataKey:element,
       }
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      // console.log(`Dialog result: ${result}`);
+  }
+  editResaurnt(element) {
+    const dialogRef = this.dialog.open(EditRestaurntsComponent,{
+      data:{
+        dataKey:element,
+      }
     });
   }
+
   displayedColumns: string[] = ['id', 'name', 'city', 'rating','actions'];
-  // dataSource = ELEMENT_DATA;
-}
-@Component({
-  selector: 'view-restaurants',
-  templateUrl: 'view-restaurants.html',
-})
-export class ViewRestaurants implements OnInit  {
-  constructor( @Inject(MAT_DIALOG_DATA) public data: any) { }
-  // viewData=data.dataKey;
-  ngOnInit() {
-    console.log(this.data.dataKey.name)
-  }
+
 }

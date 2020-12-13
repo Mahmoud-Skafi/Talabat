@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>Details </h2>
+<!-- <h1 mat-dialog-title> {{data.dataKey.name}} </h1> -->
+<form>
+  <mat-dialog-content id="print-section" class="mat-typography">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <!-- <div *ngIf="invalidRegister" class="alert alert-danger">
+            Invalid username and/or password
+          </div> -->
+          <!-- <input type="text" name="_id" value={{data.dataKey._id}} [(ngModel)]="resData._id"> -->
+          <div class="form-group">
+            <!-- {{data.dataKey.name}} -->
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="text" [(ngModel)]="resData.name" name="name" class="form-control" placeholder="" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+          </div>
+          <!-- <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input [(ngModel)]="resData.email" name="email" type="email" class="form-control" id="exampleInputEmail1"
+              aria-describedby="emailHelp" placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div> -->
+          <!-- <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input [(ngModel)]="resData.password" name="password" type="password" class="form-control"
+              id="exampleInputPassword1" placeholder="Password" required>
+          </div> -->
+
+          <!-- <button mat-button (click)="editRestaurnt(resData)" color="primary">Edit</button> -->
+          {{data.dataKey._id}}
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="editRestaurnt(resData)" color="primary">Edit</button>
+  </mat-dialog-actions>
+</form>
