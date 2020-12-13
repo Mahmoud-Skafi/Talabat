@@ -4,31 +4,31 @@
   <h2>Restaurants Name </h2>
   <div class=" res__data d-flex-row">
     <mat-icon>fastfood</mat-icon>
-    <h3> {{data.dataKey.name}} </h3>
+    <h3> {{resDtat.name}} </h3>
   </div>
   <br>
   <h2>Restaurants Description </h2>
-  <h3> {{data.dataKey.desc}} </h3>
+  <h3> {{resDtat.desc}} </h3>
   <br>
   <h2>Restaurants Location </h2>
   <div class="res__data d-flex-row">
     <mat-icon>location_on</mat-icon>
-    <h3> {{data.dataKey.city}} {{data.dataKey.street}} </h3>
+    <h3> {{resDtat.city}} {{data.dataKey.street}} </h3>
   </div>
 
   <h2>Restaurants Contact </h2>
   <div class=" res__data d-flex-row">
     <mat-icon>perm_phone_msg</mat-icon>
-    <h3> {{data.dataKey.phone}}</h3>
+    <h3> {{resDtat.phone}}</h3>
   </div>
   <h2>Restaurants Rating </h2>
   <div class="res__data d-flex-row">
     <mat-icon>thumbs_up_down
     </mat-icon>
-    <h3> {{data.dataKey.rating}}</h3>
+    <h3> {{resDtat.rating}}</h3>
   </div>
   <div class="res__image">
-    <img src="assets/img/Lab-Exam.png" alt="" width="100%">
+    <img src={{resDtat.image}} alt="" width="100%">
   </div>
   <br>
   <br>

@@ -34,6 +34,7 @@ export class RestaurantsManagerComponent implements OnInit {
   }
   viewResaurnt(element) {
     const dialogRef = this.dialog.open(ViewRestaurntsComponent,{
+      width:'100%',
       data:{
         dataKey:element,
       }
@@ -41,6 +42,7 @@ export class RestaurantsManagerComponent implements OnInit {
   }
   editResaurnt(element) {
     const dialogRef = this.dialog.open(EditRestaurntsComponent,{
+      width:'500px',
       data:{
         dataKey:element,
       }

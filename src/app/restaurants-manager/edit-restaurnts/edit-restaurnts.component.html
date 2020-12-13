@@ -1,37 +1,45 @@
-<h2 mat-dialog-title>Details </h2>
-<!-- <h1 mat-dialog-title> {{data.dataKey.name}} </h1> -->
+<h2 mat-dialog-title>Edit Restaurant</h2>
 <form>
   <mat-dialog-content id="print-section" class="mat-typography">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-
-          <!-- <div *ngIf="invalidRegister" class="alert alert-danger">
-            Invalid username and/or password
-          </div> -->
-          <!-- <input type="text" name="_id" value={{data.dataKey._id}} [(ngModel)]="resData._id"> -->
-          <div class="form-group">
-            <!-- {{data.dataKey.name}} -->
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="text" [(ngModel)]="resData.name" name="name" class="form-control" placeholder="" required>
-            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-          </div>
-          <!-- <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input [(ngModel)]="resData.email" name="email" type="email" class="form-control" id="exampleInputEmail1"
-              aria-describedby="emailHelp" placeholder="Enter email" required>
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div> -->
-          <!-- <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input [(ngModel)]="resData.password" name="password" type="password" class="form-control"
-              id="exampleInputPassword1" placeholder="Password" required>
-          </div> -->
-
-          <!-- <button mat-button (click)="editRestaurnt(resData)" color="primary">Edit</button> -->
-          {{data.dataKey._id}}
-        </div>
-      </div>
+    <div class="edit__form d-flex-col">
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Name</mat-label>
+        <input [(ngModel)]="resData.name" name="name" #input maxlength="40" matInput placeholder="Name" required>
+        <mat-hint align="end">{{input.value?.length || 0}}/40</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant City</mat-label>
+        <input [(ngModel)]="resData.city" name="city" matInput placeholder="City" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Description</mat-label>
+        <textarea autosize [(ngModel)]="resData.desc" name="desc" matInput placeholder="Description"
+          matInput></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Street</mat-label>
+        <input [(ngModel)]="resData.street" name="street" matInput placeholder="Street" required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Latitude </mat-label>
+        <input [(ngModel)]="resData.lat" name="lat" matInput placeholder="Latitude">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Longitude </mat-label>
+        <input [(ngModel)]="resData.long" name="long" matInput placeholder="Longitude">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Phone </mat-label>
+        <input [(ngModel)]="resData.phone" name="phone" matInput placeholder="Phone">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Avg Rating</mat-label>
+        <input [(ngModel)]="resData.rating" name="rating" matInput placeholder="Rating" disabled required>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Restaurant Image </mat-label>
+        <input type="url" [(ngModel)]="resData.image" name="image" matInput placeholder="Image" required>
+      </mat-form-field>
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
