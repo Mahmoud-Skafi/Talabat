@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http';
 export class RestaurantService {
 
   private restaurantUrl="http://localhost:1200/res";
-  private updateRestaurantUrl="http://localhost:1200/res"
   constructor(private http:HttpClient) { }
 
   getrestaurant(){
@@ -14,5 +13,8 @@ export class RestaurantService {
   }
   updateRestaurant(restaurant){
     return this.http.put<void>(`${this.restaurantUrl}/${restaurant._id}`,restaurant);
+  }
+  deleteRestaurant(restaurant){
+    return this.http.delete<void>(`${this.restaurantUrl}/${restaurant._id}`,restaurant);
   }
 }

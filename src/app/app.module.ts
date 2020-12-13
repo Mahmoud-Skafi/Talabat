@@ -30,6 +30,8 @@ import {NgxPrintModule} from 'ngx-print';
 import { EditRestaurntsComponent } from './restaurants-manager/edit-restaurnts/edit-restaurnts.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {AutosizeModule} from 'ngx-autosize';
+import { DeleteRestaurntsComponent } from './restaurants-manager/delete-restaurnts/delete-restaurnts.component';
+import { AddRestaurantsComponent } from './restaurants-manager/add-restaurants/add-restaurants.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +45,9 @@ import {AutosizeModule} from 'ngx-autosize';
     // ViewRestaurants,
     // ViewComponent,
     ViewRestaurntsComponent,
-    EditRestaurntsComponent
+    EditRestaurntsComponent,
+    DeleteRestaurntsComponent,
+    AddRestaurantsComponent
   ],
   imports: [
     BrowserModule,

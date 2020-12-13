@@ -9,6 +9,7 @@ import {
 } from '@angular/material/dialog';
 import { ViewRestaurntsComponent } from './view-restaurnts/view-restaurnts.component';
 import { EditRestaurntsComponent } from './edit-restaurnts/edit-restaurnts.component';
+import { DeleteRestaurntsComponent } from './delete-restaurnts/delete-restaurnts.component';
 @Component({
   selector: 'app-restaurants-manager',
   templateUrl: './restaurants-manager.component.html',
@@ -42,6 +43,14 @@ export class RestaurantsManagerComponent implements OnInit {
   }
   editResaurnt(element) {
     const dialogRef = this.dialog.open(EditRestaurntsComponent,{
+      width:'500px',
+      data:{
+        dataKey:element,
+      }
+    });
+  }
+  deleteResaurnt(element) {
+    const dialogRef = this.dialog.open(DeleteRestaurntsComponent,{
       width:'500px',
       data:{
         dataKey:element,
