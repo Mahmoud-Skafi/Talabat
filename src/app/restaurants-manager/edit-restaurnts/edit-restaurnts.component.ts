@@ -10,8 +10,6 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
   styleUrls: ['./edit-restaurnts.component.scss']
 })
 export class EditRestaurntsComponent implements OnInit {
-  // id=this.data.dataKey._id;
-
   resData=this.data.dataKey;
 
   // resData={

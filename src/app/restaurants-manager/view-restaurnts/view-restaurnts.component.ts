@@ -16,5 +16,5 @@ export class ViewRestaurntsComponent implements OnInit {
   ngOnInit() {
 
   }
-  resDtat=this.data.dataKey;
+  resData=this.data.dataKey;
 }

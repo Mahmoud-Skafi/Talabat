@@ -10,6 +10,7 @@ import {
 import { ViewRestaurntsComponent } from './view-restaurnts/view-restaurnts.component';
 import { EditRestaurntsComponent } from './edit-restaurnts/edit-restaurnts.component';
 import { DeleteRestaurntsComponent } from './delete-restaurnts/delete-restaurnts.component';
+import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.component';
 @Component({
   selector: 'app-restaurants-manager',
   templateUrl: './restaurants-manager.component.html',
@@ -55,6 +56,11 @@ export class RestaurantsManagerComponent implements OnInit {
       data:{
         dataKey:element,
       }
+    });
+  }
+  addResaurnt() {
+    const dialogRef = this.dialog.open(AddRestaurantsComponent,{
+      width:'500px',
     });
   }
 
