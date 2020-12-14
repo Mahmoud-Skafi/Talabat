@@ -12,5 +12,5 @@ export class ViewMenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  menuData=this.data.dataKey;
 }
