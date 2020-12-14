@@ -18,7 +18,7 @@ export class DeleteRestaurntsComponent implements OnInit {
   }
   resData=this.data.dataKey;
 
-  editRestaurnt(resData){
+  deleteRestaurnt(resData){
     this.restaurantService.deleteRestaurant(resData).subscribe(
       {
         next:res=>{

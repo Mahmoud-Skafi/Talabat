@@ -9,19 +9,16 @@
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Restaurant resID</mat-label>
-        <input [(ngModel)]="menuData.res_id" name="res_id" matInput placeholder="City" required>
+        <input [(ngModel)]="menuData.res_id" name="res_id" matInput placeholder="City" disabled>
       </mat-form-field>
-
-
-
 
 
       <mat-form-field appearance="outline">
         <mat-label>Restaurant Name</mat-label>
         <mat-select [(ngModel)]="menuData.res_id" name="res_id">
 
-          <mat-option *ngFor='let menu of allMenuData' [value]="menu._id">
-            {{menu.name}}
+          <mat-option *ngFor='let res of resData' [value]="res._id">
+            {{res.name}}
           </mat-option>
         </mat-select>
         <!-- <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>

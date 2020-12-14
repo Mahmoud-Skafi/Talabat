@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuService } from 'src/app/services/menu.service';
+import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
   selector: 'app-add-menu',
@@ -9,7 +10,8 @@ import { MenuService } from 'src/app/services/menu.service';
 })
 export class AddMenuComponent implements OnInit {
 
-  constructor(private menuService:MenuService, private router:Router) { }
+  constructor(private menuService:MenuService, private router:Router,
+    private restaurantService:RestaurantService) { }
   id=Math.floor((Math.random() * 1000) + 100);
   menuData={
     "_id":this.id,
@@ -20,13 +22,13 @@ export class AddMenuComponent implements OnInit {
     "image":"",
     "rating":0
   }
-  allMenuData=[]
+  resData=[]
   ngOnInit(){
-    this.menuService.getMenus().subscribe(
+    this.restaurantService.getrestaurant().subscribe(
       {
         next:res=>{
 
-          this.allMenuData=res;
+          this.resData=res;
           console.log(res);
         },
         error:err=>{
