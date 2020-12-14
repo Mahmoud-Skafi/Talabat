@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { MenuManagerComponent } from './menu-manager/menu-manager.component';
 import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
 const routes: Routes = [
   {
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path:'restaurants',
     component:RestaurantsManagerComponent,canActivate:[AuthGuard]
+  },
+  {
+    path:'menus',
+    component:MenuManagerComponent,canActivate:[AuthGuard]
   },
   {
     path:'**',

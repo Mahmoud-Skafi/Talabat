@@ -11,6 +11,7 @@ import { ViewRestaurntsComponent } from './view-restaurnts/view-restaurnts.compo
 import { EditRestaurntsComponent } from './edit-restaurnts/edit-restaurnts.component';
 import { DeleteRestaurntsComponent } from './delete-restaurnts/delete-restaurnts.component';
 import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.component';
+
 @Component({
   selector: 'app-restaurants-manager',
   templateUrl: './restaurants-manager.component.html',
@@ -20,7 +21,7 @@ import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.compo
 export class RestaurantsManagerComponent implements OnInit {
   restaurantData=[];
   constructor(private restaurantService:RestaurantService,public authService:AuthService,public dialog: MatDialog) { }
-  resId;
+  // resId;
   ngOnInit() {
     this.restaurantService.getrestaurant().subscribe(
       {

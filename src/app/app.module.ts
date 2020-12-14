@@ -32,6 +32,12 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {AutosizeModule} from 'ngx-autosize';
 import { DeleteRestaurntsComponent } from './restaurants-manager/delete-restaurnts/delete-restaurnts.component';
 import { AddRestaurantsComponent } from './restaurants-manager/add-restaurants/add-restaurants.component';
+import { MenuManagerComponent } from './menu-manager/menu-manager.component';
+import { ViewMenuComponent } from './menu-manager/view-menu/view-menu.component';
+import { EditMenuComponent } from './menu-manager/edit-menu/edit-menu.component';
+import { AddMenuComponent } from './menu-manager/add-menu/add-menu.component';
+import { DeleteMenuComponent } from './menu-manager/delete-menu/delete-menu.component';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +53,12 @@ import { AddRestaurantsComponent } from './restaurants-manager/add-restaurants/a
     ViewRestaurntsComponent,
     EditRestaurntsComponent,
     DeleteRestaurntsComponent,
-    AddRestaurantsComponent
+    AddRestaurantsComponent,
+    MenuManagerComponent,
+    ViewMenuComponent,
+    EditMenuComponent,
+    AddMenuComponent,
+    DeleteMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +77,8 @@ import { AddRestaurantsComponent } from './restaurants-manager/add-restaurants/a
     MatDialogModule,
     NgxPrintModule,
     MatFormFieldModule,
-    AutosizeModule
+    AutosizeModule,
+    MatSelectModule
   ],
   providers: [
     AuthService,
