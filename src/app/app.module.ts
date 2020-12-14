@@ -38,6 +38,11 @@ import { EditMenuComponent } from './menu-manager/edit-menu/edit-menu.component'
 import { AddMenuComponent } from './menu-manager/add-menu/add-menu.component';
 import { DeleteMenuComponent } from './menu-manager/delete-menu/delete-menu.component';
 import {MatSelectModule} from '@angular/material/select';
+import { OrdersManagerComponent } from './orders-manager/orders-manager.component';
+import { EditOrderComponent } from './orders-manager/edit-order/edit-order.component';
+import { DeleteOrderComponent } from './orders-manager/delete-order/delete-order.component';
+import { AddOrderComponent } from './orders-manager/add-order/add-order.component';
+import { ViewOrderComponent } from './orders-manager/view-order/view-order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,7 +63,12 @@ import {MatSelectModule} from '@angular/material/select';
     ViewMenuComponent,
     EditMenuComponent,
     AddMenuComponent,
-    DeleteMenuComponent
+    DeleteMenuComponent,
+    OrdersManagerComponent,
+    EditOrderComponent,
+    DeleteOrderComponent,
+    AddOrderComponent,
+    ViewOrderComponent
   ],
   imports: [
     BrowserModule,

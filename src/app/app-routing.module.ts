@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { MenuManagerComponent } from './menu-manager/menu-manager.component';
+import { OrdersManagerComponent } from './orders-manager/orders-manager.component';
 import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path:'menus',
     component:MenuManagerComponent,canActivate:[AuthGuard]
+  },
+  {
+    path:'orders',
+    component:OrdersManagerComponent,canActivate:[AuthGuard]
   },
   {
     path:'**',
