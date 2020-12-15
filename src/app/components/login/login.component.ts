@@ -11,11 +11,6 @@ import {AuthService} from '../../guard/auth.service';
 export class LoginComponent  {
 
   invalidLogin:boolean;
-  // userData={
-  //   user_name:'',
-  //   password:''
-  // }
-
   constructor(
     private authService:AuthService,
     public router:Router

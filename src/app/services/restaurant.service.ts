@@ -8,7 +8,7 @@ export class RestaurantService {
   private restaurantUrl="http://localhost:1200/res";
   constructor(private http:HttpClient) { }
   /**
-   *@returns json data
+   *@returns jsonObject
    */
   getrestaurant(){
     return this.http.get<any>(this.restaurantUrl);

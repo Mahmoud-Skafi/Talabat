@@ -1,6 +1,6 @@
 <app-navbar>
   <div menus>
-    <button (click)="addMenu()" mat-raised-button color="primary">ADD</button>
+    <button class="btn btn--fab" (click)="addMenu()" mat-fab color="primary">+</button>
     <table restaurnts mat-table [dataSource]="menuData" class="mat-elevation-z8">
 
       <!--- Note that these columns can be defined in any order.

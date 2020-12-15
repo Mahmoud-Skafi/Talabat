@@ -1,6 +1,6 @@
 table {
   width: 80%;
-  margin: auto;
+  margin: 40px auto;
 }
 .actions__buts {
   width: 20% !important;
@@ -13,4 +13,10 @@ table {
   }
 
   color: rgb(255, 193, 23);
+}
+.btn--fab {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  font-size: 25px;
 }

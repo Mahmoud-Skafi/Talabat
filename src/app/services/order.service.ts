@@ -9,7 +9,7 @@ export class OrderService {
   private orderUrl="http://localhost:1200/order";
   constructor(private http:HttpClient) { }
   /**
-   *@returns json data
+   *@returns jsonObject
    */
   getOrder(){
     return this.http.get<any>(this.orderUrl);

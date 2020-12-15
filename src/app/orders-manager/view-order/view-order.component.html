@@ -1,36 +1,35 @@
 <h2 mat-dialog-title>Details </h2>
 <!-- <h1 mat-dialog-title> {{data.dataKey.name}} </h1> -->
 <mat-dialog-content id="print-section" class="mat-typography">
-  <h2>Restaurants Name </h2>
+  <h2>Customer ID </h2>
   <div class=" res__data d-flex-row">
-    <mat-icon>fastfood</mat-icon>
-    <h3> {{orderData.name}} </h3>
-  </div>
-  <br>
-  <h2>Restaurants Description </h2>
-  <h3> {{orderData.desc}} </h3>
-  <br>
-  <h2>Restaurants Location </h2>
-  <div class="res__data d-flex-row">
-    <mat-icon>location_on</mat-icon>
-    <h3> {{orderData.city}} {{orderData.street}} </h3>
+    <mat-icon>account_box</mat-icon>
+    <h3> {{orderData.customer_id}} </h3>
   </div>
 
-  <h2>Restaurants Contact </h2>
+  <h2>Quantity </h2>
+  <div class="d-flex-row">
+    <mat-icon>production_quantity_limits</mat-icon>
+    <h3> {{orderData.quantity}} </h3>
+  </div>
+  <h2>Customer Address</h2>
+  <div class="res__data d-flex-row">
+    <mat-icon>location_on</mat-icon>
+    <h3> {{orderData.address}} </h3>
+  </div>
+
+  <h2>Customer Phone </h2>
   <div class=" res__data d-flex-row">
     <mat-icon>perm_phone_msg</mat-icon>
     <h3> {{orderData.phone}}</h3>
   </div>
-  <h2>Restaurants Rating </h2>
+  <h2>Order Date </h2>
   <div class="res__data d-flex-row">
-    <mat-icon>thumbs_up_down
+    <mat-icon>event
     </mat-icon>
-    <h3> {{orderData.rating}}</h3>
+    <h3> {{orderData.order_date}}</h3>
   </div>
-  <div class="res__image">
-    <img src={{orderData.image}} alt="" width="100%">
-  </div>
-  <br>
+
   <br>
 </mat-dialog-content>
 <mat-dialog-actions align="end">

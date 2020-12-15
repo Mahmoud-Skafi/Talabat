@@ -1,14 +1,14 @@
-<h2 mat-dialog-title>Edit Restaurant</h2>
+<h2 mat-dialog-title>Add Menu</h2>
 <form>
   <mat-dialog-content id="print-section" class="mat-typography">
     <div class="edit__form d-flex-col">
       <mat-form-field appearance="outline">
-        <mat-label>Restaurant Name</mat-label>
+        <mat-label>Menu Name</mat-label>
         <input [(ngModel)]="menuData.name" name="name" #input maxlength="40" matInput placeholder="Name" required>
         <mat-hint align="end">{{input.value?.length || 0}}/40</mat-hint>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Restaurant resID</mat-label>
+        <mat-label>Restaurant ID</mat-label>
         <input [(ngModel)]="menuData.res_id" name="res_id" matInput placeholder="City" disabled>
       </mat-form-field>
 
@@ -16,40 +16,34 @@
       <mat-form-field appearance="outline">
         <mat-label>Restaurant Name</mat-label>
         <mat-select [(ngModel)]="menuData.res_id" name="res_id">
-
           <mat-option *ngFor='let res of resData' [value]="res._id">
             {{res.name}}
           </mat-option>
         </mat-select>
-        <!-- <mat-error *ngIf="animalControl.hasError('required')">Please choose an animal</mat-error>
-        <mat-hint>{{animalControl.value?.sound}}</mat-hint> -->
+
       </mat-form-field>
-
-
-
-
-
       <mat-form-field appearance="outline">
-        <mat-label>Restaurant Description</mat-label>
+        <mat-label>Menu Description</mat-label>
         <textarea autosize [(ngModel)]="menuData.descr" name="descr" matInput placeholder="Description"
           matInput></textarea>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Restaurant price</mat-label>
+        <mat-label>Menu price</mat-label>
         <input [(ngModel)]="menuData.price" name="price" matInput placeholder="price" required>
       </mat-form-field>
       <mat-form-field appearance="outline">
-        <mat-label>Restaurant image </mat-label>
-        <input [(ngModel)]="menuData.image" name="image" matInput placeholder="image">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Restaurant rating </mat-label>
+        <mat-label>Menu rating </mat-label>
         <input [(ngModel)]="menuData.rating" name="rating" matInput placeholder="rating">
       </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Menu image </mat-label>
+        <input [(ngModel)]="menuData.image" name="image" matInput placeholder="image">
+      </mat-form-field>
+
     </div>
   </mat-dialog-content>
   <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button color="primary" (click)="addRestaurnt(menuData)">ADD</button>
+    <button mat-raised-button color="primary" (click)="addMenu(menuData)">ADD</button>
   </mat-dialog-actions>
 </form>

@@ -8,11 +8,10 @@ import { AuthService } from './auth.service';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private authService:AuthService, private router:Router){
-  }
+  constructor(private authService:AuthService,
+     private router:Router){}
   canActivate(){
     if(this.authService.isLoggedIn()){
-      // console.log(localStorage.getItem('token'));
       return true;
     }
     else{

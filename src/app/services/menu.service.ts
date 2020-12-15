@@ -8,7 +8,7 @@ export class MenuService {
   private menuUrl="http://localhost:1200/menu";
   constructor(private http:HttpClient) { }
 /**
- *@returns json data
+ *@returns jsonObject
  */
 getMenus(){
   return this.http.get<any>(this.menuUrl);

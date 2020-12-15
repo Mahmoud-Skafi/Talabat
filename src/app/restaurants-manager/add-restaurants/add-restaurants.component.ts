@@ -19,7 +19,7 @@ export class AddRestaurantsComponent implements OnInit {
     "long": "",
     "phone": "",
     "image":"",
-    "rating":Number
+    "rating":0
   }
   constructor(
   private restaurantService:RestaurantService,

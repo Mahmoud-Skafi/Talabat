@@ -1,31 +1,24 @@
 <h2 mat-dialog-title>Details </h2>
 <!-- <h1 mat-dialog-title> {{data.dataKey.name}} </h1> -->
 <mat-dialog-content id="print-section" class="mat-typography">
-  <h2>Restaurants Name </h2>
+  <h2>Menu Name</h2>
   <div class=" res__data d-flex-row">
     <mat-icon>fastfood</mat-icon>
     <h3> {{menuData.name}} </h3>
   </div>
   <br>
-  <h2>Restaurants Description </h2>
-  <h3> {{menuData.desc}} </h3>
+  <h2>Menu Description </h2>
+  <h3> {{menuData.descr}} </h3>
   <br>
-  <h2>Restaurants Location </h2>
+  <h2>Menu price</h2>
   <div class="res__data d-flex-row">
-    <mat-icon>location_on</mat-icon>
-    <h3> {{menuData.city}} {{menuData.street}} </h3>
+    <mat-icon>attach_money</mat-icon>
+    <h3> {{menuData.price}}</h3>
   </div>
-
-  <h2>Restaurants Contact </h2>
-  <div class=" res__data d-flex-row">
-    <mat-icon>perm_phone_msg</mat-icon>
-    <h3> {{menuData.phone}}</h3>
-  </div>
-  <h2>Restaurants Rating </h2>
+  <h2>Menu Rating </h2>
   <div class="res__data d-flex-row">
-    <mat-icon>thumbs_up_down
-    </mat-icon>
-    <h3> {{menuData.rating}}</h3>
+    <mat-icon>thumbs_up_down</mat-icon>
+    <h3 style="padding-left:10px"> {{menuData.rating}}</h3>
   </div>
   <div class="res__image">
     <img src={{menuData.image}} alt="" width="100%">
