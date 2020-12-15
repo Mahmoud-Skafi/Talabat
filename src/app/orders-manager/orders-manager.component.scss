@@ -1,0 +1,23 @@
+.btn--state-disabled {
+  cursor: no-drop;
+}
+.btn--state-success {
+  color: rgb(8, 163, 8);
+}
+
+table {
+  width: 80%;
+  margin: auto;
+}
+.actions__buts {
+  width: 20% !important;
+}
+.but--state-view {
+  .res__data {
+    h3 {
+      margin-left: 10px;
+    }
+  }
+
+  color: rgb(255, 153, 0);
+}

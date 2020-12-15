@@ -13,9 +13,7 @@ export class NavbarComponent implements OnInit {
     this.router = _router.url;
   }
 
-  ngOnInit(
-
-  ) {
+  ngOnInit() {
   }
 
 }

@@ -43,6 +43,8 @@ import { EditOrderComponent } from './orders-manager/edit-order/edit-order.compo
 import { DeleteOrderComponent } from './orders-manager/delete-order/delete-order.component';
 import { AddOrderComponent } from './orders-manager/add-order/add-order.component';
 import { ViewOrderComponent } from './orders-manager/view-order/view-order.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,7 +90,9 @@ import { ViewOrderComponent } from './orders-manager/view-order/view-order.compo
     NgxPrintModule,
     MatFormFieldModule,
     AutosizeModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [
     AuthService,

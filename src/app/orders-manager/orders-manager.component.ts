@@ -13,8 +13,18 @@ import { ViewOrderComponent } from './view-order/view-order.component';
   styleUrls: ['./orders-manager.component.scss']
 })
 export class OrdersManagerComponent implements OnInit {
+  // {
+  //   "_id": 5,
+  //   "res_id": 2,
+  //   "menu_id": 7,
+  //   "customer_id": 1,
+  //   "quantity": 2,
+  //   "address": "Univeristy Street",
+  //   "phone": "444555555",
+  //   "order_date": "2020-12-09T21:50:08.000Z"
+  //   }
 
-displayedColumns: string[] = ['id', 'restaurnts_id', 'name', 'rating','price' ,'actions'];
+displayedColumns: string[] = ['id', 'restaurnts_id', 'menu_id','customer_id', 'quantity','order_date' ,'actions'];
  orderData=[];
   constructor(private orderService:OrderService,public authService:AuthService,public dialog: MatDialog) { }
 

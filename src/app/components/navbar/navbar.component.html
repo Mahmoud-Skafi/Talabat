@@ -24,32 +24,30 @@
   </mat-drawer>
 
   <div class="sidenav__content">
-    <!-- <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button> -->
-    <mat-toolbar>
+    <mat-toolbar class="toolbar" style="background-color: #fff;">
       <div class="nabvbar">
         <button (click)="drawer.toggle()" mat-icon-button class="example-icon"
           aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        <span>My App</span>
-        <div class="navbar--elements">
-          <span class="example-spacer"></span>
+        <span>TALABAT</span>
+        <div class="navbar--elements d-flex">
+
           <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>favorite</mat-icon>
+            <mat-icon>notifications</mat-icon>
           </button>
           <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
             <mat-icon>share</mat-icon>
           </button>
+          <div class="user__imgae"></div>
         </div>
 
       </div>
-
     </mat-toolbar>
 
     <ng-content restaurnts></ng-content>
     <ng-content menus></ng-content>
+    <ng-content Dashborad></ng-content>
   </div>
 
 </mat-drawer-container>

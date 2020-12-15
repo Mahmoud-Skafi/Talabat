@@ -1,18 +1,27 @@
-<!-- <div navbar>
-  <div sample>
-    <h1>adadadada</h1>
-  </div>
-</div> -->
 <app-navbar>
+  <div Dashborad class="dashborad">
+    <div class="dashborad__container">
+      <div class="dashborad__card-container">
 
+        <mat-card [routerLink]="['/dashboard']" class="dashborad__card">
+          <div class="card__elements">
+            <div class="card--icon">
+              <button mat-fab>
+                <mat-icon>groups</mat-icon>
+              </button>
+            </div>
+            <div class="card--info">
+              <h1>2,369</h1>
+            </div>
+            <div class="card--header">
+              <h3>Customers</h3>
+            </div>
+          </div>
+        </mat-card>
+
+
+
+      </div>
+    </div>
+  </div>
 </app-navbar>
-
-<!-- <div class="example-button-row">
-  <button mat-flat-button>Basic</button>
-  <button mat-flat-button color="primary">Primary</button>
-  <button mat-flat-button color="accent">Accent</button>
-  <button (click)="authService.logout()" mat-flat-button color="warn">Warn</button>
-  <button mat-flat-button>logout</button>
-  <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
-
-</div> -->
