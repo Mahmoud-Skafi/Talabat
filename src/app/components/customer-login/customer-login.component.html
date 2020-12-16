@@ -11,8 +11,7 @@
       <mat-card-content>
 
         <mat-form-field class="example-full-width">
-          <input type="email" [(ngModel)]="userData.user_name" name="user_name" matInput placeholder="Username"
-            required>
+          <input type="email" [(ngModel)]="userData.email" name="email" matInput placeholder="Email" required>
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
@@ -30,7 +29,9 @@
       <div class="d-jcc" style="margin-top: 20px;">
         <a [routerLink]="['/']" style="text-align: center; text-decoration: none;">Back to home?!</a>
       </div>
-
+      <div class="d-jcc" style="margin-top: 20px;">
+        <a [routerLink]="['/register']" style="text-align: center; text-decoration: none;">Don't have account?!</a>
+      </div>
 
     </form>
   </mat-card>

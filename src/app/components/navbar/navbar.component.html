@@ -2,8 +2,11 @@
   <mat-drawer #drawer class="sidenav__container" mode="side" opened>
     <div class="test"></div>
     <div class="sidebar__logo">
-      <h4>TALABAT</h4>
+      <img [routerLink]="['/dashboard']" style="cursor: pointer; border: none !important;" src="assets/img/logo.png"
+        alt="" width="150px">
     </div>
+    <br>
+    <br>
     <button [routerLink]="['/dashboard']" class="but but--paimary" mat-button color="primary">
       <mat-icon>dashboard</mat-icon> Dashborad
     </button>
@@ -21,7 +24,7 @@
     <button [routerLink]="['/customers']" class="but but--state" mat-button color="primary">
       <mat-icon>support_agent</mat-icon> Customer
     </button>
-    <button class="but but--state-danger" mat-button color="warn">
+    <button (click)="logout()" class="but but--state-danger" mat-button color="warn">
       <mat-icon>power_settings_new</mat-icon> logout
     </button>
   </mat-drawer>
@@ -33,7 +36,7 @@
           aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        <span>TALABAT</span>
+        <span></span>
         <div class="navbar--elements d-flex">
 
           <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">

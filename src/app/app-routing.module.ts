@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CustomerLoginComponent } from './components/customer-login/customer-login.component';
 
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -14,6 +15,10 @@ import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-m
 const routes: Routes = [
   {
     path:'login',
+    component:CustomerLoginComponent
+  },
+  {
+    path:'admin/login',
     component:LoginComponent
   },
   {

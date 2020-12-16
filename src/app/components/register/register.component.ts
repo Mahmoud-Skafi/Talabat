@@ -11,26 +11,28 @@ export class RegisterComponent implements OnInit {
   constructor(private authService:AuthService,private router:Router) { }
   invalidRegister:boolean;
   userData = {
-    "user_name": "",
+    "first_name": "",
+    "last_name": "",
     "email": "",
     "password": "",
-    "role":"admin"
+    "phone":"",
+    "role":"customer"
   };
 
+  // "first_name": "mahmoud",
+  // "last_name": "skafi",
+  // "email":"madd@mad.com",
+  // "password":"05995484",
+  // "phone": "05995484",
+  // "role":"customer"
   ngOnInit(): void {
   }
-  // registerUser(){
-  //   console.log(this.userData)
-  //   return this._auth.registerUser(this.userData)
-  //   .subscribe(
-  //     res=> console.log(res),
-  //     err=> console.log(err)
-  //   )
-  // }
+
   register(userData){
-    this.authService.registerUser(userData).subscribe({
+    console.log(userData);
+    this.authService.CustomerRegisterUser(userData).subscribe({
         next:res=>{
-          // console.log(res);
+          console.log(res);
           this.router.navigate(['/login']);
         },
         error:err=>{

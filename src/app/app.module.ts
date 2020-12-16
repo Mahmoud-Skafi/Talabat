@@ -48,6 +48,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CustomerManagerComponent } from './customer-manager/customer-manager.component';
 
 import { DeleteCustomerComponent } from './customer-manager/delete-customer/delete-customer.component';
+import { CustomerLoginComponent } from './components/customer-login/customer-login.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +77,9 @@ import { DeleteCustomerComponent } from './customer-manager/delete-customer/dele
     ViewOrderComponent,
     CustomerManagerComponent,
 
-    DeleteCustomerComponent
+    DeleteCustomerComponent,
+
+    CustomerLoginComponent
   ],
   imports: [
     BrowserModule,

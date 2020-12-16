@@ -10,6 +10,8 @@ export class AuthService {
 
   private registerUrl="http://localhost:1200/admin/register";
   private loginUrl="http://localhost:1200/admin/login";
+  private CustomerRegisterUrl="http://localhost:1200/client/register";
+  private CustomerLoginUrl="http://localhost:1200/client/login";
 
   constructor(private http:HttpClient,private router:Router) { }
   /**
@@ -25,6 +27,20 @@ export class AuthService {
    */
   login(user){
     return this.http.post(this.loginUrl,user);
+  }
+  /**
+   *
+   * @param user
+   */
+  CustomerRegisterUser(user){
+    return this.http.post(this.CustomerRegisterUrl,user);
+  }
+  /**
+   *
+   * @param user
+   */
+  Customerlogin(user){
+    return this.http.post(this.CustomerLoginUrl,user);
   }
   /**
    * remove token from local storage
