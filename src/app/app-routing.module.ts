@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { RegisterComponent } from './components/register/register.component';
+import { CustomerManagerComponent } from './customer-manager/customer-manager.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path:'orders',
     component:OrdersManagerComponent,canActivate:[AuthGuard]
+  },
+  {
+    path:'customers',
+    component:CustomerManagerComponent,canActivate:[AuthGuard]
   },
   {
     path:'**',

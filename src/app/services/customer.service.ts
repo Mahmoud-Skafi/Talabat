@@ -13,5 +13,10 @@ export class CustomerService {
   getCustomer(){
     return this.http.get<any>(this.customerUrl);
    }
-
+  /**
+   * @param Customer
+   */
+  deleteCustomer(Customer){
+    return this.http.delete<void>(`${this.customerUrl}/${Customer._id}`,Customer);
+  }
 }

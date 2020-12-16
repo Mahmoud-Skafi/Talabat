@@ -15,21 +15,23 @@ getMenus(){
  }
 
    /**
-   * @param restaurant
+   * @param Menu
    */
   updateMenu(Menu){
     return this.http.put<void>(`${this.menuUrl}/${Menu._id}`,Menu);
   }
+
   /**
-   * @param restaurant
-   */
-  deleteMenu(Menu){
-    return this.http.delete<void>(`${this.menuUrl}/${Menu._id}`,Menu);
-  }
-  /**
-   * @param restaurant
+   * @param Menu
    */
   addMenu(Menu){
     return this.http.post<void>(`${this.menuUrl}`,Menu);
+  }
+  /**
+   *
+   * @param Menu
+   */
+  deleteMenu(Menu){
+    return this.http.delete<void>(`${this.menuUrl}/${Menu._id}`,Menu);
   }
 }

@@ -37,7 +37,7 @@ export class AddMenuComponent implements OnInit {
       }
     )
   }
-  addRestaurnt(menuData){
+  addMenu(menuData){
     console.log(menuData);
     this.menuService.addMenu(menuData).subscribe(
       {

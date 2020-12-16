@@ -45,6 +45,9 @@ import { AddOrderComponent } from './orders-manager/add-order/add-order.componen
 import { ViewOrderComponent } from './orders-manager/view-order/view-order.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
+import { CustomerManagerComponent } from './customer-manager/customer-manager.component';
+
+import { DeleteCustomerComponent } from './customer-manager/delete-customer/delete-customer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +73,10 @@ import {MatCardModule} from '@angular/material/card';
     EditOrderComponent,
     DeleteOrderComponent,
     AddOrderComponent,
-    ViewOrderComponent
+    ViewOrderComponent,
+    CustomerManagerComponent,
+
+    DeleteCustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ export class AuthService {
 
   private registerUrl="http://localhost:1200/admin/register";
   private loginUrl="http://localhost:1200/admin/login";
+
   constructor(private http:HttpClient,private router:Router) { }
   /**
    *

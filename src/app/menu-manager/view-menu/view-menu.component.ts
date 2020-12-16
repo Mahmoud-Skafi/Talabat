@@ -14,3 +14,10 @@ export class ViewMenuComponent implements OnInit {
   }
   menuData=this.data.dataKey;
 }
+// "_id": 2,
+// "res_id": 1,
+// "name": "skafi_restaurnt",
+// "descr": "description for the menu",
+// "price": 15,
+// "image": "../public/images/1.jpg",
+// "rating": 5,
