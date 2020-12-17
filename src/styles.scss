@@ -1,8 +1,12 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
+body {
+  // font-family: "Open Sans", sans-serif !important;
 }
 .d-jcc {
   display: flex !important;
@@ -74,10 +78,24 @@
 .w-100 {
   width: 100% !important;
 }
-.h-100vh {
-  height: 100vh;
-}
+// .h-100vh {
+//   height: 100vh;
+// }
 table {
   width: 80% !important;
   margin: 40px auto !important;
 }
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   overflow: hidden !important;
+// }
+p {
+  overflow: hidden;
+}
+// .mat-card-title {
+//   overflow: hidden !important;
+// }
