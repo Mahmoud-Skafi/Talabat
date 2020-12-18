@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../guard/auth.service';
 import { MenuService } from '../services/menu.service';
 import { RestaurantService } from '../services/restaurant.service';
@@ -10,7 +11,10 @@ import { RestaurantService } from '../services/restaurant.service';
 })
 export class RestaurantsPageComponent implements OnInit {
   isLogin:boolean=false;
-  constructor(public authService:AuthService,private restaurantService:RestaurantService,private menuService:MenuService) { }
+  constructor(public authService:AuthService,
+    private restaurantService:RestaurantService,
+    private menuService:MenuService,
+    private router:Router) { }
   restaurantData=[];
   menuData:any;
   ngOnInit() {
@@ -33,18 +37,7 @@ export class RestaurantsPageComponent implements OnInit {
     this.isLogin=false;
   }
   resid(data){
-    // let id = data._id;
-    this.menuService.getMenuById(data).subscribe(
-      {
-        next:res=>{
+    this.router.navigate([`/ps/restaurants/${data._id}`])
 
-          this.menuData=res;
-        },
-        error:err=>{
-          console.log(err);
-        }
-      }
-    )
-    console.log(this.menuData)
   }
 }

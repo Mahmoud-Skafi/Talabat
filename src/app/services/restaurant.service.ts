@@ -21,8 +21,7 @@ export class RestaurantService {
   }
 
   getRestauranById(restaurant){
-    console.log(restaurant);
-    return this.http.get<any>(`${this.restaurantUrl}/22`);
+    return this.http.get<any>(`${this.restaurantUrl}/${restaurant}`);
   }
   /**
    * @param restaurant

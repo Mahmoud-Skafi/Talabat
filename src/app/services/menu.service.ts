@@ -20,8 +20,8 @@ getMenus(){
   updateMenu(Menu){
     return this.http.get<any>(`${this.menuUrl}/${Menu._id}`,Menu);
   }
-  getMenuById(Menu){
-    return this.http.get<any>(`${this.menuUrl}/res/${Menu._id}`,Menu);
+  getMenuById(Res){
+    return this.http.get<any>(`${this.menuUrl}/res/${Res}`,Res);
   }
 
   /**

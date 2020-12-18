@@ -36,7 +36,8 @@
       <h1>All Restaurants</h1>
     </div>
     <div class="card-container">
-      <div *ngFor="let res of restaurantData" class="res--card" (click)="resid(res)">
+      <div style="cursor: pointer;" [routerLink]="['/login']" *ngFor="let res of restaurantData" class="res--card"
+        (click)="resid(res)">
         <div class="res--image">
           <img src={{res.image}} alt="">
         </div>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../guard/auth.service';
+import { MenuService } from '../services/menu.service';
 import { RestaurantService } from '../services/restaurant.service';
 
 @Component({
@@ -10,38 +11,58 @@ import { RestaurantService } from '../services/restaurant.service';
   styleUrls: ['./restaurant-menus.component.scss']
 })
 export class RestaurantMenusComponent implements OnInit {
-  isLogin:boolean=false;
-  // private routeSub: Subscription;
-  resData=[];
-  resId:any;
-  constructor(private restaurantService:RestaurantService,) { }
-    ngOnInit() {
-    //   this.isLogin= this.authService.isLoggedIn();
-    // this.routeSub = this.route.params.subscribe(params => {
-    //   this.resId=params['id'];
-    // });
-    // console.log(this.resId)
+  isLogin: boolean = false;
+  resData:any ;
+  resId: any;
+  menuData:any;
+  private routeSub: Subscription;
+  constructor(public restaurantService: RestaurantService,
+    private route: ActivatedRoute,
+    private authService:AuthService,
+    private menuService:MenuService) { }
+  ngOnInit() {
+      this.isLogin= this.authService.isLoggedIn();
+    this.routeSub = this.route.params.subscribe(params => {
+      this.resId=params['id'];
+    });
+    console.log(this.resId);
+
     this.getRes();
+    this.getResMenus();
 
   }
-  getRes(){
-    this.restaurantService.getrestaurant().subscribe(
+  getRes() {
+    this.restaurantService.getRestauranById(this.resId).subscribe(
       {
-        next:res=>{
-          this.resData=res;
+        next: res => {
+
+          this.resData = res;
+
         },
-        error:err=>{
+        error: err => {
           console.log(err);
         }
       }
     )
-    console.log(this.resData);
+  }
+  getResMenus(){
+    this.menuService.getMenuById(this.resId).subscribe(
+      {
+        next: res => {
+          this.menuData = res;
+          console.log(this.menuData)
+        },
+        error: err => {
+          console.log(err);
+        }
+      }
+    )
   }
   ngOnDestroy() {
-    // this.routeSub.unsubscribe();
+    this.routeSub.unsubscribe();
   }
-  logout(){
-    // this.authService.logout();
-    // this.isLogin=false;
+  logout() {
+    this.authService.logout();
+    this.isLogin=false;
   }
 }

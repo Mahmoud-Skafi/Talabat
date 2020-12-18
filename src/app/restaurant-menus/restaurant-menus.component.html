@@ -34,12 +34,39 @@
   <div class="main-res--container">
     <div class="res-card">
       <div class="res--image">
-        <img src="" alt="">
+        <img src={{resData.image}} alt="">
       </div>
       <div class="res--info">
-        <h1></h1>
-        <h3></h3>
+        <h1 style="color: coral; font-size: 30px;">{{resData.name}}</h1>
+        <h3>{{resData.desc}}</h3>
+        <h3>
+          <mat-icon>location_on</mat-icon> {{resData.city}}, {{resData.street}}
+        </h3>
+        <h3>
+          <mat-icon>perm_phone_msg</mat-icon> {{resData.phone}}
+        </h3>
+        <h2>
+          <mat-icon>thumbs_up_down
+          </mat-icon> {{resData.rating}}
+        </h2>
+      </div>
+    </div>
+    <br>
+
+    <div class="menu--container">
+      <div class="menu--card-container">
+        <div *ngFor="let menu of menuData" class="menu--card">
+          <div class="menu--image">
+            <img src={{menu.image}} alt="">
+          </div>
+          <div class="menu--info">
+            <h1>{{menu.name}}</h1>
+            <p>{{(menu.name.length>20)? (menu.name | slice:0:20)+'..':(menu.name)}}</p>
+            <span class="price">{{menu.price}} $</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
 </div>

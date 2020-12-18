@@ -47,3 +47,64 @@ button {
   width: 80%;
   margin: 40px auto;
 }
+.res-card {
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+}
+.res-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+.res--image {
+  img {
+    border-radius: 5px;
+  }
+  margin-bottom: 20px;
+}
+h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu--container {
+  // background-color: rgb(255, 215, 183);
+}
+.menu--card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  // background-color: rgb(255, 212, 193);
+  border-radius: 10px;
+}
+.menu--card {
+  background-color: #ffefe2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+.menu--image {
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+.price {
+  position: absolute;
+  top: 5px;
+  z-index: 12;
+  left: 50px;
+  padding: 10px 20px;
+
+  color: #ffffff;
+  border-radius: 50px;
+  background-color: rgb(255, 156, 98);
+}
