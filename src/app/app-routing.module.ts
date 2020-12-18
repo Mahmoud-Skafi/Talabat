@@ -10,9 +10,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { MenuManagerComponent } from './menu-manager/menu-manager.component';
+import { MenuPageComponent } from './menu-page/menu-page.component';
 import { OrdersManagerComponent } from './orders-manager/orders-manager.component';
+import { RestaurantMenusComponent } from './restaurant-menus/restaurant-menus.component';
 import { RestaurantsManagerComponent } from './restaurants-manager/restaurants-manager.component';
+import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
 const routes: Routes = [
+  {
+    path:'ps/restaurants',
+    component:RestaurantsPageComponent,
+  },
   {
     path:'login',
     component:CustomerLoginComponent
@@ -37,6 +44,7 @@ const routes: Routes = [
     path:'restaurants',
     component:RestaurantsManagerComponent,canActivate:[AuthGuard]
   },
+
   {
     path:'menus',
     component:MenuManagerComponent,canActivate:[AuthGuard]
@@ -48,6 +56,14 @@ const routes: Routes = [
   {
     path:'customers',
     component:CustomerManagerComponent,canActivate:[AuthGuard]
+  },
+  {
+    path:'ps/menu/:id',
+    component:MenuPageComponent
+  },
+  {
+    path:'ps/restaurants/:id',
+    component:RestaurantMenusComponent
   },
   {
     path:'**',

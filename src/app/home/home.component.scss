@@ -254,3 +254,10 @@ button {
     width: 400px;
   }
 }
+.profile-image {
+  background: url("./me.jpg") no-repeat;
+  background-size: cover;
+  width: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+}

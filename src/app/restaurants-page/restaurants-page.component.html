@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="navbar">
+    <mat-toolbar class="navbar__container d-jcb">
+
+      <div class="navbar__logo">
+        <img [routerLink]="['/']" style="cursor: pointer; border: none !important;" src="assets/img/logo2.png" alt=""
+          width="150px">
+      </div>
+      <div class="navbar__elements">
+        <ul>
+          <li><a href=""></a><button mat-button [routerLink]="['/']">Home</button></li>
+          <li><a href=""><button mat-button [routerLink]="['/ps/restaurants']">All Restaurants</button></a></li>
+          <li><a href=""><button mat-button>Offers</button></a></li>
+          <li><a href=""><button mat-button>About us</button></a></li>
+          <li><a href=""><button mat-button>Contact us</button></a></li>
+        </ul>
+      </div>
+      <div class="d-flex-row">
+
+        <div *ngIf="isLogin" class="profile-image">
+        </div>
+        <button *ngIf="!isLogin" [routerLink]="['/login']" mat-icon-button class="btn">
+          <mat-icon>person</mat-icon>
+        </button>
+        <button *ngIf="isLogin" mat-icon-button class="btn">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button *ngIf="isLogin" mat-icon-button class="btn" (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+  </div>
+  <div class="main-card">
+    <div class="header d-jcc">
+      <h1>All Restaurants</h1>
+    </div>
+    <div class="card-container">
+      <div *ngFor="let res of restaurantData" class="res--card" (click)="resid(res)">
+        <div class="res--image">
+          <img src={{res.image}} alt="">
+        </div>
+        <div class="res--name">
+          <h1>{{(res.name.length>10)? (res.name | slice:0:12)+'..':(res.name)}}</h1>
+          <h3>{{res.city}} {{res.street}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

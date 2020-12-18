@@ -19,6 +19,11 @@ export class RestaurantService {
   updateRestaurant(restaurant){
     return this.http.put<void>(`${this.restaurantUrl}/${restaurant._id}`,restaurant);
   }
+
+  getRestauranById(restaurant){
+    console.log(restaurant);
+    return this.http.get<any>(`${this.restaurantUrl}/22`);
+  }
   /**
    * @param restaurant
    */

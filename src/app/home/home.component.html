@@ -8,19 +8,25 @@
       </div>
       <div class="navbar__elements">
         <ul>
-          <li><a href=""></a><button mat-button>Home</button></li>
-          <li><a href=""><button mat-button>All Restaurants</button></a></li>
-          <li><a href=""><button mat-button>Offers</button></a></li>
-          <li><a href=""><button mat-button>About us</button></a></li>
-          <li><a href=""><button mat-button>Contact us</button></a></li>
+          <li><a></a><button mat-button>Home</button></li>
+          <li><a><button mat-button [routerLink]="['/ps/restaurants']">All Restaurants</button></a></li>
+          <li><a><button mat-button>Offers</button></a></li>
+          <li><a><button mat-button>About us</button></a></li>
+          <li><a><button mat-button>Contact us</button></a></li>
         </ul>
       </div>
-      <div>
-        <button [routerLink]="['/login']" mat-icon-button class="btn">
+      <div class="d-flex-row">
+
+        <div *ngIf="isLogin" class="profile-image">
+        </div>
+        <button *ngIf="!isLogin" [routerLink]="['/login']" mat-icon-button class="btn">
           <mat-icon>person</mat-icon>
         </button>
-        <button mat-icon-button class="btn">
+        <button *ngIf="isLogin" mat-icon-button class="btn">
           <mat-icon>shopping_cart</mat-icon>
+        </button>
+        <button *ngIf="isLogin" mat-icon-button class="btn" (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
         </button>
       </div>
     </mat-toolbar>
@@ -34,7 +40,7 @@
     <div class="text--container">
       <div class="main--header">
         <div class="main--text">
-          <h1>Order food online in UAE</h1>
+          <h1>Order food online in PS</h1>
         </div>
         <div class="search--input">
           <input type="text" value="" placeholder="Search for area, street, landmark...">
@@ -140,7 +146,7 @@
   </div>
   <footer>
     <div class="d-jcc">
-      <p style="padding: 20px 0px; font-size: 14px ; ">Made with ❤️ by<a href=""
+      <p style="padding: 20px 0px; font-size: 14px ; ">Made with ❤️ by<a
           style="color: #f4aa33 !important ; text-decoration: none;"> mahmoud
 
           skafi</a> </p>

@@ -49,6 +49,9 @@ import { CustomerManagerComponent } from './customer-manager/customer-manager.co
 
 import { DeleteCustomerComponent } from './customer-manager/delete-customer/delete-customer.component';
 import { CustomerLoginComponent } from './components/customer-login/customer-login.component';
+import { RestaurantsPageComponent } from './restaurants-page/restaurants-page.component';
+import { MenuPageComponent } from './menu-page/menu-page.component';
+import { RestaurantMenusComponent } from './restaurant-menus/restaurant-menus.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +82,13 @@ import { CustomerLoginComponent } from './components/customer-login/customer-log
 
     DeleteCustomerComponent,
 
-    CustomerLoginComponent
+    CustomerLoginComponent,
+
+    RestaurantsPageComponent,
+
+    MenuPageComponent,
+
+    RestaurantMenusComponent
   ],
   imports: [
     BrowserModule,
